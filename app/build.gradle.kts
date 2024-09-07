@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.ktlint)
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.kotlin.compose.compiler)
+    alias(libs.plugins.googleServices)
 }
 
 android {
@@ -96,4 +97,7 @@ dependencies {
 //Serialization and Navigation 2.8.0
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.navigation.compose)
+    //Firebase Integration
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.crashlytics)
 }
